@@ -48,7 +48,7 @@ int main()
     PWMInit();
     SetDuty(PWM1_BASE,PWM_OUT_3,0.4);
 
-    float x=-0.0125673;
+    float x = -213456789932;
     uint32_t floatChar [13];
     int Exponential = 0;
     int i = 0;
@@ -60,12 +60,12 @@ int main()
     //
     //Get the effective value and exponential, the basic form of the float expressed in the 1602 is +- A.xxxxxxe+-EEE
     //
-    while(abs(x)<1)
+    while(fabs(x)<1)
     {
         x = 10*x;
         counter--;
     }
-    while(abs(x)>10)
+    while(fabs(x)>10)
     {
         x = x/10;
         counter++;
