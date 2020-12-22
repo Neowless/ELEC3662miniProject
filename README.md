@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 14:10:38
- * @LastEditTime: 2020-12-22 15:18:09
+ * @LastEditTime: 2020-12-22 15:18:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Neowless\workspace_v10\blink\README.md
@@ -28,7 +28,7 @@ In this project a matrix keypad was applied.
 | PD2  | COL3 |
 | PD3  | COL4 |
 
-![image](https://github.com/Neowless/ELEC3662miniProject/blob/master/keypad.png = 500x500)
+![image](https://github.com/Neowless/ELEC3662miniProject/blob/master/keypad.png =500x500)
 
 **1602 LCD**
 |  Launch Pad   | 1602 LCD  |
