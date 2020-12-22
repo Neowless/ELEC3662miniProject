@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 14:10:38
- * @LastEditTime: 2020-12-22 16:28:58
+ * @LastEditTime: 2020-12-22 16:31:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Neowless\workspace_v10\blink\README.md
@@ -52,10 +52,10 @@ All of the pins on the keypad are directly connected to the GPIOs on the launch 
 | +3.3V  | A |
 | GND  | K |
 
-In this project, there's no demand to get the feadback of the LCD, so the Read/Write pin on the LCD is connected to the GND.
-To transmit the segment on the LCD and conserve the GPIO of the launchpad, the LCD is working in the nibble mode which means only D4-D7 are used to transfer data.
-For further information about this LCD, please check the link below.
-https://bbs.21ic.com/UploadFiles/2009-11/261113444198.pdf
-In addition to control the contrast of the LCD, V0 port on the LCD is attached to PA7, which is controled by module 1 PWM Generator 1.
+In this project, there's no demand to get the feadback of the LCD, so the Read/Write pin on the LCD is connected to the GND.<br>
+To transmit the segment on the LCD and conserve the GPIO of the launchpad, the LCD is working in the nibble mode which means only D4-D7 are used to transfer data.<br>
+For further information about this LCD, please check the link below.<br>
+https://bbs.21ic.com/UploadFiles/2009-11/261113444198.pdf<br>
+In addition to control the contrast of the LCD, V0 port on the LCD is attached to PA7, which is controled by module 1 PWM Generator 1.<br>
 
 <div><img width="500" height="500" float:left src="https://github.com/Neowless/ELEC3662miniProject/blob/master/pwm.png"/></div>
