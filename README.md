@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-12-22 14:10:38
+ * @LastEditTime: 2020-12-22 14:45:55
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \undefinedc:\Users\Neowless\workspace_v10\blink\README.md
+-->
 # ELEC3662miniProject
 ## Abstract
 This project is based on EK-TM4C123GXL with 4*4 Keypand and 1602 LCD.<br>
@@ -19,3 +27,19 @@ In this project a matrix keypad was applied.
 | PD1  | COL2 |
 | PD2  | COL3 |
 | PD3  | COL4 |
+
+**1602 LCD**
+|  Launch Pad   | 1602 LCD  |
+|   :----:  |  :----: |
+| GND  | VSS |
+| VBUS  | VDD |
+| PA7  | V0 |
+| PA3  | RS |
+| GND  | RW |
+| PA2  | E |
+| PB2  | D4 |
+| PB3  | D5 |
+| PB4  | D6 |
+| PB5  | D7 |
+| +3.3V  | A |
+| GND  | K |
