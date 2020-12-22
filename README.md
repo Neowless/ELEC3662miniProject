@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 14:10:38
- * @LastEditTime: 2020-12-22 15:43:35
+ * @LastEditTime: 2020-12-22 16:05:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Neowless\workspace_v10\blink\README.md
@@ -16,6 +16,9 @@ Yuheng Huo reserves the right to explain the terms of the event.<br>
 ## Introduction
 ### Connection
 **Keypad**
+
+<div><img width="500" height="500" float:left src="https://github.com/Neowless/ELEC3662miniProject/blob/master/keypad.png"/></div>
+
 In this project a matrix keypad was applied.
 |  Launch Pad   | Keypad  |
 |   :----:  |  :----: |
@@ -28,9 +31,12 @@ In this project a matrix keypad was applied.
 | PD2  | COL3 |
 | PD3  | COL4 |
 
-<div><img width="500" height="500" float:left src="https://github.com/Neowless/ELEC3662miniProject/blob/master/keypad.png"/></div>
+All of the pins on the keypad are directly connected to the GPIOs on the launch board, it is not of necessity to applied external pull-up voltage.
 
 **1602 LCD**
+
+<div><img width="500" height="244" float:left src="https://github.com/Neowless/ELEC3662miniProject/blob/master/lcd.png"/></div>
+
 |  Launch Pad   | 1602 LCD  |
 |   :----:  |  :----: |
 | GND  | VSS |
@@ -46,4 +52,8 @@ In this project a matrix keypad was applied.
 | +3.3V  | A |
 | GND  | K |
 
-<div><img width="500" height="244" float:left src="https://github.com/Neowless/ELEC3662miniProject/blob/master/lcd.png"/></div>
+Cause in this project, there's no demand to get the feadback of the LCD, so the Read/Write pin on the LCD is connected to the GND.
+To transmit the segment on the LCD and conserve the GPIO of the launchpad, the LCD is working in the nibble mode which means only D4-D7 are used to transfer data.
+In addition to control the contrast of the LCD, V0 port on the LCD is attached to PA7, which is controled by module 1 PWM Generator 1.
+
+<div><img width="500" height="244" float:left src="https://github.com/Neowless/ELEC3662miniProject/blob/master/pwm.png"/></div>
