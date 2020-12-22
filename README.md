@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 14:10:38
- * @LastEditTime: 2020-12-22 15:32:55
+ * @LastEditTime: 2020-12-22 15:42:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Neowless\workspace_v10\blink\README.md
@@ -45,3 +45,5 @@ In this project a matrix keypad was applied.
 | PB5  | D7 |
 | +3.3V  | A |
 | GND  | K |
+
+<div><img width="500" height="500" float:left src="https://github.com/Neowless/ELEC3662miniProject/blob/master/lcd.png"/></div>
