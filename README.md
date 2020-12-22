@@ -19,4 +19,5 @@ In this project a matrix keypad was applied.
 | PD1  | COL2 |
 | PD2  | COL3 |
 | PD3  | COL4 |
+
 ![image](http://github.com/Neowless/ELEC3662miniProject/raw/master/keypad.png)
