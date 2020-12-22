@@ -48,7 +48,7 @@ int main()
     PWMInit();
     SetDuty(PWM1_BASE,PWM_OUT_3,0.4);
 
-    float x=123;
+    float x=-0.0125673;
     uint32_t floatChar [13];
     int Exponential = 0;
     int i = 0;
@@ -70,7 +70,7 @@ int main()
         x = x/10;
         counter++;
     }
-    Effective = x*1000000;
+    Effective = abs(x*1000000);
     Exponential = counter;
     //
     // Check whether the float is Positive or Negative to determine the first CHAR
@@ -87,7 +87,7 @@ int main()
 
         for(i = 0; i < 6; i++)
         {
-            Cache = x * pow(10,i+1);
+            Cache = abs(x * pow(10,i+1));
             floatChar[i+3] = 0x30 + Cache%10;
         }
         floatChar[9] = 0x65;// This is e
@@ -127,7 +127,7 @@ int main()
             floatChar[2] = 0x2E;
             for(i = 0; i < 7; i++)
             {
-                Cache = x * pow(10,i);
+                Cache = abs(x * pow(10,i));
                 floatChar[i+3] = 0x30 + Cache%10;
                 NUMBERCOUNTER = 10;
             }
@@ -136,12 +136,16 @@ int main()
         {
             for(i = 0; i < 7; i++)
             {
-                Cache = x * pow(10,i);
+                Cache = abs(x * pow(10,i));
                 floatChar[i+1] = 0x30 + Cache%10;
-                NUMBERCOUNTER = 8;
-                floatChar[Exponential+2] = 0x2E;
-
+                NUMBERCOUNTER = 9;
             }
+
+            for(i = 0; i < 6 - Exponential; i++)
+            {
+                floatChar[Exponential+3+i] = floatChar[Exponential+2+i];
+            }
+            floatChar[Exponential+2] = 0x2E;
         }
 
 
