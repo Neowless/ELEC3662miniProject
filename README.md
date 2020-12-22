@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-22 14:10:38
- * @LastEditTime: 2020-12-22 16:06:07
+ * @LastEditTime: 2020-12-22 16:06:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \undefinedc:\Users\Neowless\workspace_v10\blink\README.md
@@ -52,7 +52,7 @@ All of the pins on the keypad are directly connected to the GPIOs on the launch 
 | +3.3V  | A |
 | GND  | K |
 
-Cause in this project, there's no demand to get the feadback of the LCD, so the Read/Write pin on the LCD is connected to the GND.
+In this project, there's no demand to get the feadback of the LCD, so the Read/Write pin on the LCD is connected to the GND.
 To transmit the segment on the LCD and conserve the GPIO of the launchpad, the LCD is working in the nibble mode which means only D4-D7 are used to transfer data.
 In addition to control the contrast of the LCD, V0 port on the LCD is attached to PA7, which is controled by module 1 PWM Generator 1.
 
