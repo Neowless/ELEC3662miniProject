@@ -11,54 +11,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-
-// Check the float is a POSITIVE(0) or NEGATIVE(1) number
-int float_PN(uint32_t x)
-{
-    return((x&0x80000000)>>31);
-}
-
-// Check the Exponential number in Binary
-int float_EXP(uint32_t x)
-{
-    return(((x&0x7F800000)>>23) -127);
-}
-
-//Check the effective value
-uint32_t float_EFF(uint32_t x)
-{
-    return((x&0x007FFFFF)|0x00800000);
-}
-int float_Integer(uint32_t x)
-{
-    int EXP = float_EXP(x);
-    uint32_t EFF = float_EFF(x);
-    int EFFInt = 0;
-    if(EXP<0)// The dot should move to left.
-    {
-        return(0);
-    }
-    else if (EXP>23)// The dot is after the whole number.
-    {
-        EFFInt = EFF;
-        EFFInt = EFFInt*pow(2,EXP-23);
-        return(EFFInt);
-    }
-    return(EFF>>(23-EXP));// The dot moves to right.
-}
-
-int INTLength(int x)
-{
-    int counter = 0;
-    while(x)
-    {
-        x = x/10;
-        counter++;
-    }
-    return(counter);
-}
-
-char Float_Number_Render(char line, char collum, float x)
+void Float_Number_Render(char line, char collum, float x)
 {
     char floatChar [13];
     int Exponential = 0;
@@ -81,12 +34,12 @@ char Float_Number_Render(char line, char collum, float x)
         x = x/10;
         counter++;
     }
-    Effective = abs(x*1000000);
+    Effective = fabs(x*1000000)+0.5; // transform it into integer
     Exponential = counter;
     //
     // Check whether the float is Positive or Negative to determine the first CHAR
     //
-    if(x>0){floatChar[0]=0x20;}
+    if(x>0){floatChar[0]=0x20;}// none
     else{floatChar[0]=0x2D;}
     //
     // If the exponential value is less than -1 or larger than 3, the value of the float value should be expressed as scientific notation.
@@ -163,5 +116,5 @@ char Float_Number_Render(char line, char collum, float x)
     LCD_PrintLnCount(line, p);
 
 
-    return(p);
+    return(NUMBERCOUNTER);
 }

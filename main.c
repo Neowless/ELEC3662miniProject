@@ -26,6 +26,7 @@
 
 
 void SysTick_Wait(unsigned long delay);
+uint32_t Interface = 0x00;
 
 
 int main()
@@ -47,10 +48,8 @@ int main()
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_6, 0x00);
     PWMInit();
     SetDuty(PWM1_BASE,PWM_OUT_3,0.4);
-
-    float x = -213456789932;
-    char p = Float_Number_Render(0, 1, x);
-
+    float x = 5;
+    Float_Number_Render(0, 1, x);
 
     while(1)
     {

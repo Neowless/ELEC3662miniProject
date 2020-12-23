@@ -217,9 +217,24 @@ void LCD_PrintLn(char i, char *s) {
 
 void LCD_PrintLnCount(char i, char *s)
 {
-    LCD_Cursor(i, 0);
+    LCD_Cursor(i, 1);
     for (i=0; i<strlen(s); i++) {
         LCD_Show(s[i]);
+    }
+    LCD_Command(0xD0); //Hide cursor
+}
+
+
+void LCD_Fresh(char *s1, char *s2)
+{
+    LCD_Cursor(0, 0);
+    int i;
+    for (i=0; i<strlen(s1); i++) {
+        LCD_Show(s1[i]);
+    }
+    LCD_Cursor(1, 0);
+    for (i=0; i<strlen(s2); i++) {
+        LCD_Show(s2[i]);
     }
     LCD_Command(0xD0); //Hide cursor
 }

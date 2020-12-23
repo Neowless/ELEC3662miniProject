@@ -35,6 +35,7 @@ void LCD_PrintLn(char i, char *s);                  //Print specific line
 void LCD_PrintJustify(char i, char *s, char *d);    //Print specific line floated left and floated right text
 void LCD_Cursor(char x, char y);                    //Set cursor
 void LCD_PrintLnCount(char i, char *s);
+void LCD_Fresh(char *s1, char *s2);
 
 
 #endif /* PERIPHERAL_LCD_H_ */
