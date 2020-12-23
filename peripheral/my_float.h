@@ -13,6 +13,7 @@ int float_EXP(uint32_t x);
 uint32_t float_EFF(uint32_t x);
 int float_Integer(uint32_t x);
 int INTLength(int x);
+char *float2char(float x);
 
 
 #endif /* PERIPHERAL_MY_FLOAT_H_ */
