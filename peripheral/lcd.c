@@ -215,12 +215,11 @@ void LCD_PrintLn(char i, char *s) {
     LCD_Command(0xD0); //Hide cursor
 }
 
-void LCD_PrintLnCount(char i, char *s, uint32_t ui32Count) {
+void LCD_PrintLnCount(char i, char *s)
+{
     LCD_Cursor(i, 0);
-    while(ui32Count--)
-    {
-        LCD_Show(*s);
-        s=s+4;
+    for (i=0; i<strlen(s); i++) {
+        LCD_Show(s[i]);
     }
     LCD_Command(0xD0); //Hide cursor
 }

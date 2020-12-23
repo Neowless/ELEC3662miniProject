@@ -49,7 +49,8 @@ int main()
     SetDuty(PWM1_BASE,PWM_OUT_3,0.4);
 
     float x = -213456789932;
-    char *p = float2char(x);
+    char p = Float_Number_Render(0, 1, x);
+
 
     while(1)
     {

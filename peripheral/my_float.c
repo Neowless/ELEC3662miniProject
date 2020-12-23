@@ -58,9 +58,9 @@ int INTLength(int x)
     return(counter);
 }
 
-char *float2char(float x)
+char Float_Number_Render(char line, char collum, float x)
 {
-    uint32_t floatChar [13];
+    char floatChar [13];
     int Exponential = 0;
     int i = 0;
     int counter = 0;
@@ -160,6 +160,8 @@ char *float2char(float x)
         }
     }
     char*p = &floatChar;
-    LCD_PrintLnCount(0, p, NUMBERCOUNTER);
+    LCD_PrintLnCount(line, p);
+
+
     return(p);
 }
